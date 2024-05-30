@@ -204,3 +204,4 @@ end
 # last_two_characters = string.slice(-2..-1)
 # puts last_two_characters  # Output: "le"
 # puts string
+#
