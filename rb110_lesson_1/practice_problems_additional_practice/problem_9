@@ -1,0 +1,29 @@
+# A notably missing method is something provided in Rails, but not in Ruby itself...titleize. This method in Ruby on Rails creates a string that has each word capitalized as it would be in a title.
+
+words = "the flintstones rock"
+
+# arr = words.split(" ")
+# new_arr = []
+
+# arr.map do |word|
+#   new_arr << word.capitalize + " "
+# end
+
+# new_arr.last.delete_suffix!(" ")
+
+# str = new_arr.join
+# p str
+counter = 0
+new_str = ""
+
+words.each_char do |letter|
+  if counter == 0 || new_str[-1] == " "
+    new_str << letter.upcase
+  else 
+    new_str << letter
+  end
+  counter += 1
+end
+
+p words
+p new_str
