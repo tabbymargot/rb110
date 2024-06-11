@@ -29,21 +29,14 @@ Algorithm
 
 =end
 
-# def leap_year?(year)
-#   if year % 4 != 0
-#     false
-#   elsif year % 100 != 0
-#     true
-#   else
-#     year % 400 == 0
-#   end
-# end
-
 def leap_year?(year)
-  # true            true              true
-  # year % 100 == 0 ? year % 400 == 0 : year % 4 == 0
-  # true
-  year % 400 == 0 ? year % 100 == 0 : year % 4 == 0
+  if year % 4 != 0
+    false
+  elsif year % 100 != 0
+    true
+  else
+    year % 400 == 0
+  end
 end
 
 p leap_year?(2016) == true
